@@ -1,0 +1,87 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    background-color: darkorchid;
+    
+  }
+  
+  header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    background-color: darkorchid;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    background-color:darkorchid;
+  }
+  
+  nav ul li {
+    margin: 0 1rem;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    
+
+  }
+  
+  .hero {
+    padding: 2rem 0;
+    background-image: url("bg.avif");
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    
+  }
+  
+  section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    /*background-color: darkorchid;*/
+    
+  }
+  
+  ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+  }
+  
+  a {
+    color:blue;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem 0;
+    background:palevioletred;
+    color: #fff;
+    margin-top: 2rem;
+  }

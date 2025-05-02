@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Portfolio Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    /* Base Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      font-family: 'Orbitron', sans-serif;
+      color: #0ff;
+    }
+
+    /* Navbar */
+    nav {
+      background: #111;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 15px #0ff;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    nav h1 {
+      color: #0ff;
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: #0ff;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 100px 20px 60px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .neon-heading {
+      font-size: 3rem;
+      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+      margin-bottom: 50px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: rgba(0, 255, 255, 0.05);
+      padding: 25px;
+      border-radius: 20px;
+      border: 2px solid #0ff;
+      box-shadow: 0 0 10px #0ff, 0 0 20px #0ff inset;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: pulse 2s infinite;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #0ff, 0 0 40px #0ff inset;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 10px #0ff, 0 0 20px #0ff inset;
+      }
+      50% {
+        box-shadow: 0 0 20px #0ff, 0 0 40px #0ff inset;
+      }
+    }
+
+    footer {
+      padding: 30px;
+      text-align: center;
+      color: #0ff;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Spacing */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav a {
+        margin: 10px 0 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>My Neon Portfolio</h1>
+    <div>
+      <a href="#projects">Projects</a>
+    </div>
+  </nav>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2 class="neon-heading">My Projects</h2>
+    <div class="project-grid">
+
+      <div class="project-card">
+        <h3>Data Entry App</h3>
+        <p><strong>Tech Stack:</strong> Python, Tkinter, MySQL</p>
+        <p>A GUI application to store and manage user data with a dynamic interface.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>MUSICAL Flow of Education</h3>
+        <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+        <p>An interactive learning website themed around music, featuring quizzes and sound interactions.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Interactive Quiz Platform</h3>
+        <p><strong>Tech Stack:</strong> HTML, CSS, JS, API</p>
+        <p>A modular quiz platform using image maps and animated transitions for user experience.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Your Name. All rights reserved.
+  </footer>
+
+  <!-- Smooth Scroll JS -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
